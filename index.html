@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consumo de REST-API de Computadoras</title>
+</head>
+<body>
+  <p>Consumo de REST-API de Computadoras</p>
+
+  <div>
+    <label>Corporación</label>
+    <input type="text" id="nameCorporation">
+  </div>
+
+  <div>
+    <label>Versión Software</label>
+    <input type="text" id="versionSoftware">
+  </div>
+
+  <div>
+    <label>Nombre de Computadora</label>
+    <input type="text" id="nameComputer">
+  </div>
+
+  <div>
+    <label>Procesador</label>
+    <input type="text" id="processor">
+  </div>
+
+  <div>
+    <label>¿Es portátil? (sí/no)</label>
+    <input type="text" id="portatil">
+  </div>
+
+  <button onclick="postComputer()">POST computadora</button>
+  <button onclick="getComputers()">GET computadoras</button>
+
+  <div id="resultado"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="callrestapi.js"></script>
+</body>
+</html>
