@@ -8,7 +8,7 @@ function postComputer() {
   console.log("Enviando a:", url);
 
   var nameCorporation = $('#nameCorporation').val();
-  var versionSoftware = $('#versionSoftware').val();
+  var versionSoftware = $('#nameSoftware').val();
   var nameComputer = $('#nameComputer').val();
   var processor = $('#processor').val();
   var portatilText = $('#portatil').val().toLowerCase();

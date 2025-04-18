@@ -1,38 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Consumo de REST-API de Computadoras</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <p>Consumo de REST-API de Computadoras</p>
 
-  <div>
-    <label>Corporation</label>
-    <input type="text" id="nameCorporation">
-  </div>
+  <h2>Consumo de REST-API de Computadoras</h2>
 
-  <div>
-    <label>Software Version</label>
-    <input type="text" id="versionSoftware">
-  </div>
+  <form onsubmit="event.preventDefault(); postComputer();">
+    <div>
+      <label for="nameCorporation">Corporation</label>
+      <input type="text" id="nameCorporation" required>
+    </div>
 
-  <div>
-    <label>Computer Name</label>
-    <input type="text" id="nameComputer">
-  </div>
+    <div>
+      <label for="versionSoftware">Software Version</label>
+      <input type="text" id="versionSoftware" required>
+    </div>
 
-  <div>
-    <label>Process</label>
-    <input type="text" id="processor">
-  </div>
+    <div>
+      <label for="nameComputer">Computer Name</label>
+      <input type="text" id="nameComputer" required>
+    </div>
 
-  <div>
-    <label>¿Portable? (si/no)</label>
-    <input type="text" id="portatil">
-  </div>
+    <div>
+      <label for="processor">Processor</label>
+      <input type="text" id="processor" required>
+    </div>
 
-  <button onclick="postComputer()">POST computadora</button>
-  <button onclick="getComputers()">GET computadoras</button>
+    <div>
+      <label for="portatil">¿Portátil? (sí/no)</label>
+      <input type="text" id="portatil" required>
+    </div>
+
+    <input type="submit" value="POST computadora">
+    <button type="button" onclick="getComputers()">GET computadoras</button>
+  </form>
 
   <div id="resultado"></div>
 
