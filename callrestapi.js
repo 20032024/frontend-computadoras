@@ -1,4 +1,6 @@
-var url = "http://34.60.119.163:8080/api/computers";
+var url = "http://localhost:8080/api/computers";
+
+//var url = "https://pg-restapi-computers.onrender.com/api/computers";
 
 function postComputer() {
   console.log("Enviando a:", url);
@@ -27,7 +29,7 @@ function postComputer() {
     contentType: 'application/json',
     success: function (data) {
       console.log('Respuesta del servidor:', data);
-      $('#resultado').html('<pre>' + JSON.stringify(data.computer, null, 2) + '</pre>');
+      $('#resultado').html('<pre>' + JSON.stringify(data, null, 2) + '</pre>');
     },
     error: function (err) {
       console.error('Error:', err);
@@ -49,11 +51,11 @@ function getComputers() {
     var htmlTable = '<table border="1">';
     htmlTable += '<tr>' +
       '<th>ID</th>' +
-      '<th>Corporation</th>' +
-      '<th>Name</th>' +
-      '<th>Software</th>' +
-      '<th>Processor</th>' +
-      '<th>Portable</th>' +
+      '<th>nameCorporation</th>' +
+      '<th>nameComputer Name</th>'+
+      '<th>versionSoftware Version</th>' +
+      '<th>processor</th>' +
+      '<th>portatil</th>' +
     '</tr>';
 
     arrComputers.forEach(function (item) {
