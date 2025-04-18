@@ -1,5 +1,7 @@
 //var url = "http://localhost:8080/api/computers";
 
+//var url = "https://pg-restapi-computers.onrender.com/api/computers";
+
 var url = "https://pg-restapi-computers.onrender.com/api/computers";
 
 function postComputer() {
