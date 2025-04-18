@@ -1,4 +1,4 @@
-//var url = "http://localhost:8080/api/computers";
+//var url = "http://34.60.119.163:8080/api/computers";
 
 //var url = "https://pg-restapi-computers.onrender.com/api/computers";
 
