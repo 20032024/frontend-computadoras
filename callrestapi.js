@@ -27,7 +27,7 @@ function postComputer() {
     contentType: 'application/json',
     success: function (data) {
       console.log('Respuesta del servidor:', data);
-      $('#resultado').html('<pre>' + JSON.stringify(data, null, 2) + '</pre>');
+      $('#resultado').html('<pre>' + JSON.stringify(data.computer, null, 2) + '</pre>');
     },
     error: function (err) {
       console.error('Error:', err);
@@ -49,11 +49,11 @@ function getComputers() {
     var htmlTable = '<table border="1">';
     htmlTable += '<tr>' +
       '<th>ID</th>' +
-      '<th>Corporación</th>' +
-      '<th>Nombre</th>' +
+      '<th>Corporation</th>' +
+      '<th>Name</th>' +
       '<th>Software</th>' +
-      '<th>Procesador</th>' +
-      '<th>Portátil</th>' +
+      '<th>Processor</th>' +
+      '<th>Portable</th>' +
     '</tr>';
 
     arrComputers.forEach(function (item) {
@@ -63,7 +63,7 @@ function getComputers() {
         '<td>' + item.nameComputer + '</td>' +
         '<td>' + item.versionSoftware + '</td>' +
         '<td>' + item.processor + '</td>' +
-        '<td>' + (item.portatil ? 'Sí' : 'No') + '</td>' +
+        '<td>' + (item.portatil ? 'Si' : 'No') + '</td>' +
         '<td><button onclick="editComputer(' + item.id + ')">Editar</button></td>' +
         '<td><button onclick="deleteComputer(' + item.id + ')">Eliminar</button></td>' +
         '</tr>';
